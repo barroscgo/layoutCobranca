@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <title>Página de cobrança</title>
+</head>
+<body class="bg-body-secondary">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container-fluid d-flex align-items-center">
+            <img class="img-fluid" src="./imagens/logoCobranca.png" alt="logo" style="max-height: 55px; width: 75px;">
+            <a class="navbar-brand ms-0" href="index.html">Credify Cobranças Empresariais</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#servicos">Serviços</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+
+    <header class="container-fluid text-white text-center py-5 mt-5" style="background-image: url('https://www.recash.io/wp-content/uploads/2024/10/Picture14.jpg'); background-size: cover; background-position: center;">
+        <h1>Simplifique suas Cobranças B2B</h1>
+        <p>Automatize e otimize sua gestão de recebimentos empresariais.</p>
+        <a href="#contato" class="btn btn-dark">Fale conosco</a>
+    </header>
+    
+    <section id="servicos" class="container my-5">
+        <h2 class="text-center mb-5">Nossos Serviços</h2>
+        <div class="row text-center">
+            <div class="col-md-4">
+                <div class="card p-3">
+                    <h5>Automação de Cobranças</h5>
+                    <p>Elimine processos manuais, reduza erros e aumente a eficiência com cobranças automáticas e acompanhamento em tempo real. Foque no seu negócio, nós cuidamos dos recebimentos! 💼✨</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card p-3">
+                    <h5>Negociação Digital</h5>
+                    <p>Simplifique acordos com clientes! Ofereça opções de pagamento flexíveis, envie propostas online e feche negócios de forma ágil e segura. Mais praticidade, melhores resultados! 💻🤝</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card p-3">
+                    <h5>Relatórios Inteligentes</h5>
+                    <p>Tenha insights poderosos! Acesse dados detalhados, análises precisas e acompanhe o desempenho das suas cobranças em tempo real. Tome decisões mais assertivas para sua empresa! 📊🚀</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="text-center mt-4">
+            <button class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#duvidasModal">Dúvidas Frequentes sobre cobrança B2B</button>
+        </div>
+    </section>
+    <!--Modal de perguntas para redirecionar a link extermo-->
+    <div class="modal fade" id="duvidasModal" tabindex="-1" aria-labelledby="duvidasModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header bg-dark text-white">
+              <h5 class="modal-title bg" id="duvidasModalLabel">Dúvidas Frequentes sobre cobrança B2B</h5>
+              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Fechar"></button>
+            </div>
+            <div class="modal-body">
+              <p>Para saber mais sobre a cobrança B2B e ingressar de vez no assunto, clique no link abaixo e venha fazer parte da nossa familia.</p>
+              <a href="https://www.neofin.com.br/blog/cobranca-b2b" class="btn btn-dark" target="_blank">Clique aqui</a>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Fechar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <section id="contato" class="container my-5">
+        <h2 class="text-center mb-4">Fale Conosco</h2>
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card shadow">
+                    <div class="card-body">
+                        <form id="formContato" action="/enviar" method="POST">
+                            <div class="mb-3">
+                                <label for="nome" class="form-label">Nome</label>
+                                <input type="text" class="form-control" id="nome" name="nome" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="email" name="email" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="mensagem" class="form-label">Mensagem</label>
+                                <textarea class="form-control" id="mensagem" name="mensagem" rows="4" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-dark">Enviar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="alertaSucesso" class="alert alert-success mt-3 d-none" role="alert">
+            <p>Sua mensagem foi encaminhada com sucesso! Entraremos em contato em breve.</p>
+        </div>
+    </section>
+    
+    
+    <footer class="bg-dark text-white text-center py-1">
+        <p> © 2025 Copyright Credify Cobranças</p>
+    </footer>
+    
+    <script src="./js/alerta.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
